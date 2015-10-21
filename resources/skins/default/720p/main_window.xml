@@ -1,0 +1,218 @@
+<window>
+  <defaultcontrol>1001</defaultcontrol>
+  <coordinates>
+    <system>1</system>
+    <posx>0</posx>
+    <posy>0</posy>
+  </coordinates>
+  <animation effect="fade" time="250">WindowOpen</animation>
+  <animation effect="fade" time="250">WindowClose</animation>
+  <controls>
+    <control type="group" id="10">
+      <posx>0</posx>
+      <posy>0</posy>
+      <control type="image">
+        <posx>0</posx>
+        <posy>0</posy>
+        <width>1280</width>
+        <height>720</height>
+        <texture>background.png</texture>
+      </control>
+      <control type="image">
+        <posx>25</posx>
+        <posy>25</posy>
+        <width>232</width>
+        <height>84</height>
+        <texture>logo.png</texture>
+      </control>
+      <control type="button" id="1000">
+			  <description>Close Window button</description>
+			  <left>100r</left>
+			  <top>0</top>
+			  <width>64</width>
+			  <height>32</height>
+			  <label>-</label>
+			  <font>-</font>
+			  <onclick>PreviousMenu</onclick>
+			  <texturefocus>DialogCloseButton-focus.png</texturefocus>
+			  <texturenofocus>DialogCloseButton.png</texturenofocus>
+			  <onleft></onleft>
+			  <onright></onright>
+			  <onup></onup>
+			  <ondown>1001</ondown>
+		  </control>
+      <control type="list" id="1001">
+        <posx>275</posx>
+        <posy>60</posy>
+        <width>885</width>
+        <height>160</height>
+        <onleft></onleft>
+        <onright></onright>
+        <onup>1000</onup>
+        <ondown>1002</ondown>
+        <scrolltime>200</scrolltime>
+        <orientation>horizontal</orientation>
+        <itemlayout height="40" width="160">
+          <control type="label">
+            <posx>5</posx>
+            <posy>0</posy>
+            <width>150</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="40" width="160">
+          <control type="image">
+            <posx>0</posx>
+            <posy>5</posy>
+            <width>160</width>
+            <height>30</height>
+            <texture>white-background.png</texture>
+          </control>
+          <control type="label">
+            <posx>5</posx>
+            <posy>0</posy>
+            <width>150</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>black</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label</info>
+          </control>
+        </focusedlayout>
+      </control>
+      <!--
+      <control type="image">
+        <posx>25</posx>
+        <posy>120</posy>
+        <width>1220</width>
+        <height>575</height>
+        <texture>white-background.png</texture>
+      </control>
+      -->
+      <control type="panel" id="1002">
+        <posx>25</posx>
+        <posy>120</posy>
+        <width>1220</width>
+        <height>575</height>
+        <onleft></onleft>
+        <onright></onright>
+        <onup>1001</onup>
+        <ondown></ondown>
+        <pagecontrol></pagecontrol>
+        <scrolltime>200</scrolltime>
+        <orientation>vertical</orientation>
+        <itemlayout height="240" width="240">
+          <control type="image">
+            <posx>5</posx>
+            <posy>5</posy>
+            <width>230</width>
+            <height>230</height>
+            <texture>black-background.png</texture>
+          </control>
+          <control type="image">
+            <posx>14</posx>
+            <posy>14</posy>
+            <width>212</width>
+            <height>162</height>
+            <texture border="5">vid_thumb_bg.png</texture>
+          </control>
+          <control type="image">
+            <posx>15</posx>
+            <posy>15</posy>
+            <width>210</width>
+            <height>160</height>
+            <info>ListItem.icon</info>
+          </control>
+          <control type="label">
+            <posx>15</posx>
+            <posy>170</posy>
+            <width>210</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label</info>
+          </control>
+          <control type="label">
+            <posx>15</posx>
+            <posy>190</posy>
+            <width>210</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>grey2</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label2</info>
+          </control>
+        </itemlayout>
+        <focusedlayout height="240" width="240">
+          <control type="image">
+            <posx>5</posx>
+            <posy>5</posy>
+            <width>230</width>
+            <height>230</height>
+            <texture>white-background.png</texture>
+          </control>
+          <control type="image">
+            <posx>10</posx>
+            <posy>10</posy>
+            <width>220</width>
+            <height>220</height>
+            <texture>black-background.png</texture>
+          </control>
+          <control type="image">
+            <posx>14</posx>
+            <posy>14</posy>
+            <width>212</width>
+            <height>162</height>
+            <texture border="1">vid_thumb_bg.png</texture>
+          </control>
+          <control type="image">
+            <posx>15</posx>
+            <posy>15</posy>
+            <width>210</width>
+            <height>160</height>
+            <info>ListItem.icon</info>
+          </control>
+          <control type="label">
+            <posx>15</posx>
+            <posy>170</posy>
+            <width>210</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label</info>
+          </control>
+          <control type="label">
+            <posx>15</posx>
+            <posy>190</posy>
+            <width>210</width>
+            <height>40</height>
+            <font>font12</font>
+            <textcolor>white</textcolor>
+            <selectedcolor>selected</selectedcolor>
+            <align>center</align>
+            <aligny>center</aligny>
+            <info>ListItem.label2</info>
+          </control>
+        </focusedlayout>
+      </control>
+    
+    </control>
+  
+  </controls>
+</window>
