@@ -184,15 +184,23 @@ class Cinemasscre(xbmcgui.WindowXMLDialog):
         server = re.search('var SWMServer = [\'\"]([^\'\"]+?)[\'\"];', page).group(1)
         vidid = re.search('[\'\"]vidid[\'\"]:  [\'\"]([^\'\"]+?)[\'\"],', page).group(1)
         _url = 'http://%s/vod/smil:%s.smil/playlist.m3u8' % (server, vidid)
+        _playlist = reqcache.get(_url)
+        _vid = ''
+        for _line in _playlist.splitlines():
+            if _line.startswith(vidid):
+                _vid = _line.replace('_chunk.m3u8', '')
+                _vid = _vid.replace('__', '_')
+                break
+        _url = 'http://%s/vod/%s' % (server, _vid)
+        '''
         _urlb = 'http://%s/vod/%s_hd1.mp4' % (server, vidid)
-
+        '''
         player = xbmc.Player()
         player.play(_url)
         self.close()
         while player.isPlaying():
             pass
         self.doModal()
-
         return
 
     def onClick(self, controlID):
