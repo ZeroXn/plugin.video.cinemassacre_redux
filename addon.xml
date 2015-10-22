@@ -2,7 +2,7 @@
 <addon
   id="plugin.video.cinemassacre_redux"
   name="Cinemassacre Redux"
-  version="0.0.1"
+  version="0.0.2"
   provider-name="XnnX">
     <requires>
         <import addon="xbmc.python" version="2.20.0"/>
@@ -13,8 +13,8 @@
     <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-        <summary lang="en">Your add-on's summary</summary>
-        <description lang="en">Your add-on's description. Directory structure has been created by https://goo.gl/7CfkaR</description>
+        <summary lang="en">Play videos from Cinemassacre.com</summary>
+        <description lang="en">Play videos from Cinemassacre.com</description>
         <disclaimer lang="en">Feel free to use this script.</disclaimer>
         <language>en</language>
         <platform>all</platform>
